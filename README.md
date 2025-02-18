@@ -135,7 +135,7 @@ Only perform this if this is the first time you will setup your Git Environment
       - Go back to the main method (inside its curly braces).
       - Add this line to call the greet method: greet();
       ```Java
-      public static void main(String args) {
+      public static void main(String[] args) {
          greet(); // Calling the greet method
       }
       ```
@@ -168,7 +168,7 @@ Only perform this if this is the first time you will setup your Git Environment
       - In your main method, add this line to call printMessage: printMessage("This is my message!");
       ```Java
       public class MethodDemo {
-          public static void main(String args) {
+          public static void main(String[] args) {
               greet();
               printMessage("This is my message!");
           }
