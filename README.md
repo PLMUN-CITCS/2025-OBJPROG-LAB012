@@ -1,7 +1,7 @@
-# **2025-OBJPROG-LAB011**
-Week 03-04 - Conditional and Looping Statements
+# **2025-OBJPROG-LAB012**
+Week 05 - Methods in Java
 
-Laboratory # 11 - Guided Coding Exercise 5: Integrated Control and Looping Application – Number Classifier Menu
+Laboratory # 12 - Guided Coding Exercise 1: Introduction to Methods
 
 ## **Instructions**
 
@@ -77,214 +77,113 @@ Only perform this if this is the first time you will setup your Git Environment
 
 ### **Step 3: Complete the Assignment**
 
-**Laboratory # 11 - Guided Coding Exercise 5: Integrated Control and Looping Application – Number Classifier Menu**
+**Laboratory # 12 - Guided Coding Exercise 1: Introduction to Methods**
 
    **Objective:**
-   - Combine selection statements and looping constructs in an integrated application.
-   - Solve a problem by classifying numbers and allowing repeated user interaction.
+   - Define what a method is and explain its purpose in Java.
+   - Learn how to create and call (invoke) simple methods.
 
    **File Naming Convention:**
-   - `NumberClassifierMenu.java`
+   - `MethodDemo.java`
 
    **Desired Output (with day = 4 and grade = 'B'):**
    ```txt
-   === Number Classifier Menu ===
-   1. Classify a number as positive, negative, or zero
-   2. Print a multiplication table for a given number
-   3. Exit
-   Enter your choice (1-3): 1
-   Enter a number to classify: 5
-   The number 5 is positive.
-   It is an odd number.
-   Do you want to return to the menu? (Y/N): Y
-   
-   === Number Classifier Menu ===
-   1. Classify a number as positive, negative, or zero
-   2. Print a multiplication table for a given number
-   3. Exit
-   Enter your choice (1-3): 2
-   Enter a number to display its multiplication table: 3
-   Multiplication Table for 3:
-   3 x 1 = 3
-   3 x 2 = 6
-   3 x 3 = 9
-   3 x 4 = 12
-   3 x 5 = 15
-   3 x 6 = 18
-   3 x 7 = 21
-   3 x 8 = 24
-   3 x 9 = 27
-   3 x 10 = 30
-   Do you want to return to the menu? (Y/N): Y
-   
-   === Number Classifier Menu ===
-   1. Classify a number as positive, negative, or zero
-   2. Print a multiplication table for a given number
-   3. Exit
-   Enter your choice (1-3): 3
-   Exiting the program. Goodbye!
+   Hello from the greet method!
+   This is my message!
    ```
 
    **Notable Observations (to be discussed after completing the exercise):**
-   - This program combines various control flow mechanisms to create a more complex and interactive application.
-   - The use of a menu provides a user-friendly interface.
-   - The do-while loop ensures the menu is displayed at least once.
+   - You defined methods (greet and printMessage) outside the main method but within the same class.
+   - Calling a method executes the code inside that method.
+   - Methods can take parameters (like message in printMessage), which allow you to pass values to them.
 
    **Java Programming Best Practices:**
-   - Use descriptive variable names.
-   - Add comments to explain your code.
-   - Indent your code consistently.
-   - Validate user input to prevent errors (this example has minimal input validation, but it's important in real applications).
-   - Close resources like Scanner when you're finished with them.
+   - Use descriptive method names (like greet and printMessage) that indicate what the method does.
+   - Keep methods concise and focused on a single, well-defined task.
+   - Use comments to explain the purpose of your methods.
       
    **Step-by-Step Instructions:**
 
    1. Setup Class and Main Method
-      - Create a file named `NumberClassifierMenu.java`.
-      - Import the `Scanner` class at the top.
-      - Define the class `NumberClassifierMenu` and the `main` method.
-      ```Java
-      import java.util.Scanner;
-      
-      public class NumberClassifierMenu {
+      - Create a file named `MethodDemo.java`.
+      - Define the class `MethodDemo` and the `main` method.
+      ```Java      
+      public class MethodDemo {
           public static void main(String[] args) {
       
           }
       }
       ```
             
-   2. Create Scanner Object and Choice Variable
-      - Inside main, create a Scanner object named input.
-      - Declare a character variable named userChoice to store the user's choice for continuing or exiting.
+   2. Create the greet Method (Part 1)
+      - After the closing curly brace of the main method, create a greet method.
       ```Java
-      Scanner input = new Scanner(System.in);
-      char userChoice;
+      public static void greet() {
+   
+       }
       ```
 
-   3. Switch Statement for Day of the Week
-      - Start a do-while loop to allow the menu to be displayed repeatedly.
+   3. Create the greet Method (Part 2)
+      - Inside the curly braces of the greet method, add this line: System.out.println("Hello from the greet method!");
       ```Java
-      do {
-          // Menu and logic will go here
-      } while (userChoice == 'Y'); // Condition to continue
-      ```
-
-   4. Display Menu Options
-      - Inside the do-while loop, print the menu options:
-         "=== Number Classifier Menu ==="
-         "1. Classify a number as positive, negative, or zero"
-         "2. Print a multiplication table for a given number"
-         "3. Exit"
-         "Enter your choice (1-3): "
-      ```Java
-      System.out.println("\n=== Number Classifier Menu ===");
-      System.out.println("1. Classify a number as positive, negative, or zero");
-      System.out.println("2. Print a multiplication table for a given number");
-      System.out.println("3. Exit");
-      System.out.print("Enter your choice (1-3): ");
-      ```
-
-   5. Read User Choice
-      - Use input.nextInt() to read the user's menu choice and store it in an integer variable named choice.
-      ```Java
-      int choice = input.nextInt();
-      ```
-
-   6. Switch Statement for Menu Handling
-      - Create a switch statement to handle the different menu choices (choice).
-      ```Java
-      switch (choice) {
-          case 1: 
-              // Code for option 1
-              break;
-          case 2:
-              // Code for option 2
-              break;
-          case 3:
-              // Code for option 3
-              break;
-          default:
-              // Handle invalid choice
+      public static void greet() {
+         System.out.println("Hello from the greet method!"); 
       }
       ```
 
-   7. Case 1: Classify Number
-      - Inside case 1:
-         - Prompt the user to enter a number: "Enter a number to classify: "
-         - Read the number using input.nextInt() and store it in an integer variable number.
-         - Use an if-else if-else block to classify the number as positive, negative, or zero.
-         - Add an additional if-else to check if the number is even or odd using the modulus operator (%).
+   4. Call the greet Method
+      - Go back to the main method (inside its curly braces).
+      - Add this line to call the greet method: greet();
       ```Java
-      System.out.print("Enter a number to classify: ");
-      int number = input.nextInt();
-      // Use if–else selection to classify the number.
-      if (number > 0) {
-         System.out.println("The number " + number + " is positive.");
-      } else if (number < 0) {
-         System.out.println("The number " + number + " is negative.");
-      } else {
-         System.out.println("The number is zero.");
-      }
-      // Demonstrate additional boolean expression: check if the number is even.
-      if (number % 2 == 0) {
-         System.out.println("It is also an even number.");
-      } else {
-         System.out.println("It is an odd number.");
+      public static void main(String args) {
+         greet(); // Calling the greet method
       }
       ```
 
-   8. Case 2: Multiplication Table
-      - Inside case 2:
-         - Prompt the user to enter a number for the table: "Enter a number to display its multiplication table: "
-         - Read the number using input.nextInt() and store it in an integer variable tableNumber.
-         - Print "Multiplication Table for [tableNumber]:"
-         - Use a for loop to iterate from 1 to 10. Inside the loop, print each multiplication line (e.g., "3 x 1 = 3").
+   5. Create the printMessage Method (Part 1)
+      - After the closing curly brace of the greet method, create a printMessage Method
       ```Java
-      System.out.print("Enter a number to display its multiplication table: ");
-      int tableNumber = input.nextInt();
-      System.out.println("Multiplication Table for " + tableNumber + ":");
-      // Use a for loop for table generation.
-      for (int i = 1; i <= 10; i++) {
-         System.out.println(tableNumber + " x " + i + " = " + (tableNumber * i));
+      public class MethodDemo {
+          //... (main and greet methods)...
+      
+          public static void printMessage(String message) {
+      
+          }
       }
       ```
 
-   9. Case 3: Exit
-      - Inside case 3, print "Exiting the program. Goodbye!".
-```Java
-// Option 3: Exit the program.
-System.out.println("Exiting the program. Goodbye!");
-```
+   6. Create the printMessage Method (Part 2)
+      - Inside the printMessage method, add this line: System.out.println(message);
+      ```Java
+      public class MethodDemo {
+          //... (other methods)...
+      
+          public static void printMessage(String message) {
+              System.out.println(message);
+          }
+      }
+      ```
 
-   10. Case 3: Exit
-      - In the default case, print "Invalid option. Please choose between 1 and 3."
-```Java
-System.out.println("Invalid option. Please choose between 1 and 3.");
-```
+   7. Call the printMessage Method
+      - In your main method, add this line to call printMessage: printMessage("This is my message!");
+      ```Java
+      public class MethodDemo {
+          public static void main(String args) {
+              greet();
+              printMessage("This is my message!");
+          }
+      
+          //... (other methods)...
+      }
+      ```
 
-   11. Ask to Continue
-      - After the switch block, ask the user if they want to continue: "Do you want to return to the menu? (Y/N): "
-      - Use input.nextLine() to consume the leftover newline.
-      - Read the user's response using input.nextLine(), convert it to uppercase, and store the first character in userChoice.
-```Java
-System.out.print("Do you want to return to the menu? (Y/N): ");
-input.nextLine(); // Consume newline
-userChoice = input.nextLine().toUpperCase().charAt(0);
-```
-
-   12. Close Scanner
-      - Outside the do-while loop, close the Scanner object using input.close();.
-```Java
-input.close();
-```
-
-   13. Compile and Run
-       - Save the file as `NumberClassifierMenu.java`.
-       - Compile the code using `javac NumberClassifierMenu.java` in your terminal or command prompt.
-       - Run the compiled code using `java NumberClassifierMenu`.
+   8. Compile and Run
+       - Save the file as `MethodDemo.java`.
+       - Compile the code using `javac MethodDemo.java` in your terminal or command prompt.
+       - Run the compiled code using `java MethodDemo`.
 
    **Conclusion**
-   This exercise demonstrates how to integrate selection statements (if, if-else, switch) and looping constructs (do-while, for) to create a more sophisticated program.  By combining these elements, you can build interactive applications that solve problems and provide a better user experience.  This exercise reinforces the importance of planning your program logic, using appropriate control flow mechanisms, and following Java best practices for clean, efficient, and maintainable code.
+   This exercise introduced the concept of methods in Java. Methods are essential for organizing and reusing code. They allow you to break down your program into smaller, more manageable blocks, making it easier to read, understand, and maintain. By creating and calling methods, you can improve the structure and efficiency of your Java programs.
 
 ### **Step 4: Push Changes to GitHub**
 Once you've completed your changes, follow these steps to upload your work to your GitHub repository.
@@ -308,7 +207,7 @@ Once you've completed your changes, follow these steps to upload your work to yo
    Write a meaningful commit message:
    
    ```bash
-   git commit -m "Submitting OBJPROG Week 04 - Session 01 - Exercise 05"
+   git commit -m "Submitting OBJPROG Week 05 - Laboratory # 12"
    ```
    
 4. Push your changes to GitHub:
