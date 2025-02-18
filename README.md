@@ -86,7 +86,7 @@ Only perform this if this is the first time you will setup your Git Environment
    **File Naming Convention:**
    - `MethodDemo.java`
 
-   **Desired Output (with day = 4 and grade = 'B'):**
+   **Desired Output:**
    ```txt
    Hello from the greet method!
    This is my message!
